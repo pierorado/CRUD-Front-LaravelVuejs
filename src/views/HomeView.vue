@@ -2,7 +2,7 @@
 import { RouterLink } from 'vue-router';
 import TheWelcome from '../components/TheWelcome.vue'
 import axios from 'axios'
-
+import {confirmar} from '../funciones'
 export default {
     data() {
         return {
@@ -20,6 +20,11 @@ export default {
                 this.estudiantes = res.data;
                 this.cargando = false;
             });
+        },
+        eliminar(id, nombre){
+          confirmar('http://127.0.0.1:8000/api/v1/estudiantes/',id,'Eliminar estudiante','Realmente desea eliminar a '
+          +nombre+'?');
+          this.cargando = false;
         }
     },
     components: { RouterLink }
@@ -28,7 +33,7 @@ export default {
 
 <template>
   <div class="row">
-    <div class="col-lg-8 offset-lg-2">
+    <div class="col">
       <table class="table table-hover">
         <table class="table table-bordered table-striped">
           <thead>
@@ -48,7 +53,10 @@ export default {
            <tr v-else v-for="est, i in estudiantes" :key="est.id">
             <td v-text="(i+1)"></td>
             <td v-text="est.id"></td>
-            <td v-text="est.foto"></td>
+            <td>
+              <img v-if="est.foto" :src="est.foto" style="width: 350px;" class="img-thumbnail" alt=""/>
+              <img v-else="est.foto" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-64.png" style="height: 30px;" class="img-thumbnail" alt=""/>
+            </td>
             <td v-text="est.nombre"></td>
             <td v-text="est.apellido"></td>
             <td v-text="new Date(est.created_at).toLocaleDateString('es-PE')"></td>
@@ -61,7 +69,7 @@ export default {
                 <i class="fa-solid fa-edit"></i>
               </RouterLink>
               &nbsp;
-                <button class="btn btn-danger">
+                <button class="btn btn-danger" v-on:click="$event => eliminar(est.id, est.nombre)">
                 <i class="fa-solid fa-trash-can"></i>
                 </button>
             </td>
