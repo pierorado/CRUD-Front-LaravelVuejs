@@ -64,7 +64,7 @@ export default {
                 <i class="fa-solid fa-eye"></i>
               </RouterLink>
                 &nbsp;
-                <RouterLink :to="{path:'edit/'+ est.id}" class="btn btn-warning">
+                <RouterLink :to="{path:'editE/'+ est.id}" class="btn btn-warning">
                 <i class="fa-solid fa-edit"></i>
               </RouterLink>
               &nbsp;
