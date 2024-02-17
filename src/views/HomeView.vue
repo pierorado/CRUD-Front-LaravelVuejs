@@ -1,6 +1,5 @@
 <script>
 import { RouterLink } from 'vue-router';
-import TheWelcome from '../components/TheWelcome.vue'
 import axios from 'axios'
 import {confirmar} from '../funciones'
 export default {
@@ -54,7 +53,7 @@ export default {
             <td v-text="(i+1)"></td>
             <td v-text="est.id"></td>
             <td>
-              <img v-if="est.foto" :src="est.foto" style="width: 350px;" class="img-thumbnail" alt=""/>
+              <img v-if="est.foto" :src="est.foto" style="width: 100px;" class="img-thumbnail" alt=""/>
               <img v-else="est.foto" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-64.png" style="height: 30px;" class="img-thumbnail" alt=""/>
             </td>
             <td v-text="est.nombre"></td>
