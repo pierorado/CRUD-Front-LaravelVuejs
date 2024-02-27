@@ -1,29 +1,43 @@
-# frontvuelaravel
 
-This template should help get you started developing with Vue 3 in Vite.
+# Gestion de Estudiantes
 
-## Recommended IDE Setup
+En este proyecto se puede registra, modifica, eliminar y visualiza los datos de estudiantes.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+## Tech Stack
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+**Client:** Vue.js, Font Awesome y Bootstrap 
+
+**Server:** Laravel [click aqui](https://github.com/pierorado/crud-laravel-vuejs) 
+
 
 ## Project Setup
 
-```sh
-npm install
+- Clonar repositorio
+- Instalar las dependencias
+```bash
+  cd my-project
+  composer install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+- Compilación
+```bash
+  cd my-project
+  npm run dev
 ```
+## Tools
 
-### Compile and Minify for Production
+- Postman
+- Vite
+- Font Awesome 
+- Bootstrap
 
-```sh
-npm run build
-```
+
+## Screenshots
+
+![gesempleados01](https://github.com/pierorado/crud-laravel-vuejs/assets/43764514/2752194b-5828-4c01-9cdd-a459c56eff29)
+
+![image](https://github.com/pierorado/CRUD-Front-LaravelVuejs/assets/43764514/bb499910-b398-419c-a7a9-061b2a706fb5)
+
+![image](https://github.com/pierorado/CRUD-Front-LaravelVuejs/assets/43764514/c54f05f0-c82c-438c-984e-c26403bf9e11)
+
+![image](https://github.com/pierorado/CRUD-Front-LaravelVuejs/assets/43764514/357b614e-b3fd-47c9-81a8-85a05b2c8ff3)

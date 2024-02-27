@@ -60,7 +60,7 @@ export default {
             <td v-text="est.apellido"></td>
             <td v-text="new Date(est.created_at).toLocaleDateString('es-PE')"></td>
             <td>
-              <RouterLink :to="{path:'view/'+ est.id}" class="btn btn-info">
+              <RouterLink :to="{path:'viewE/'+ est.id}" class="btn btn-info">
                 <i class="fa-solid fa-eye"></i>
               </RouterLink>
                 &nbsp;

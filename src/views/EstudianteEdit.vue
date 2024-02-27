@@ -69,7 +69,7 @@ export default {
         <div class="card-body">
           <form v-on:submit="actualizar">
             <div class="d-grid col-6 mx-auto mb-3">
-              <img v-if="this.foto" :src="this.foto" style="height: 100px;" id="fotoimg" class="img-thumbnail" alt=""/>
+              <img v-if="this.foto" :src="this.foto" style="height: 200px;width: 200px;" id="fotoimg" class="img-thumbnail rounded mx-auto d-block" alt=""/>
               <img v-else="est.foto" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-64.png" style="height: 100px;" id="fotoimg" class="img-thumbnail" alt=""/>
             
             </div>
@@ -86,7 +86,7 @@ export default {
               <input v-on:change="previsualizadFoto" type="file" accept="image/png, image/jpeg, image/gif" class="form-control" />
             </div>
             <div class="d-grid col-6 mx-auto mb-3">
-              <button class="btn btn-success"><i class="fa-solid fa-gear"></i>Actualizar</button>
+              <button class="btn btn-success"><i class="fa-regular fa-pen-to-square"></i>Actualizar</button>
             </div>
           </form>
         </div>
